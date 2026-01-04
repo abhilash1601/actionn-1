@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
             name: my-dargon-txt
-            path: dragon1.txt
+            path: dragon.txt
 
   TestJob:
     needs: BuildJob
