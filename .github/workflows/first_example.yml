@@ -13,6 +13,14 @@ jobs:
             echo "my first git hub"
             ls -ltra
             cat README.md
+      - name: Generate ACCI art
+        run: cowsay -f dragon "Run for cover , I am dragon huuh!" >> dragon.txt
+
+      - name: Read the dargon
+        run: cat dragon.txt
+
+    
+    
 
 
 
