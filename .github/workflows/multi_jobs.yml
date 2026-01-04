@@ -20,7 +20,7 @@ jobs:
         run: cowsay -f dragon "Run for cover , I am dragon huuh!" >> dragon.txt
 
       - name: Upload Dragon test
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         with:
             name: my-dargon-txt
             path: dragon.txt
@@ -46,7 +46,7 @@ jobs:
     steps:
       - name: Sleep
         run: sleep 10
-        
+
       - name: Download Dragon test
         uses: actions/download-artifact@v3
         with:
