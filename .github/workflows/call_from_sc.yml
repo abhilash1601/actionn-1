@@ -9,5 +9,7 @@ jobs:
         uses: actions/Checkout@v4
 
       - name: Executing shell
-        run: ./acci_shell.sh
+        run: |
+          chmod +x acci_shell.sh
+          ./acci_shell.sh
 
