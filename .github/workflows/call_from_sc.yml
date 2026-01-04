@@ -1,0 +1,13 @@
+name: GENERATE ASSCI image
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/Checkout@v4
+
+      - name: Executing shell
+        run: ./acci_shell.sh
+
