@@ -1,0 +1,44 @@
+name: GMulti JOBS
+on: push
+
+jobs:
+  BuildJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/Checkout@v4
+
+      - name: Welcome message
+        run: | 
+            echo "my first git hub"
+            ls -ltra
+            cat README.md
+      - name: Insatll Cowsay program
+        run: sudo apt-get install cowsay -y
+
+      - name: Generate ACCI art
+        run: cowsay -f dragon "Run for cover , I am dragon huuh!" >> dragon.txt
+
+      - name: Sleep for 30
+        run: sleep 30
+
+  TestJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sleep
+        run: sleep 10
+
+      - name: File check
+        run : grep -i "dragon" dragon.txt
+
+  DeployJOB:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sleep
+        run: sleep 10
+
+      - name: Read the dargon
+        run: cat dragon.txt
+
+      - name: list out the repo
+        run : ls -ltra
