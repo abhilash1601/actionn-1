@@ -1,5 +1,5 @@
 name: GMulti JOBS
-on: push
+on: workflow_dispatch
 
 jobs:
   BuildJob:
