@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
             name: my-dargon-txt
-            path: dragon.txt
+            path: dragon1.txt
 
   TestJob:
     needs: BuildJob
@@ -33,7 +33,7 @@ jobs:
         run: sleep 10
 
       - name: Download Dragon test
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v6
         with:
             name: my-dargon-txt
 
@@ -48,7 +48,7 @@ jobs:
         run: sleep 10
 
       - name: Download Dragon test
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v6
         with:
             name: my-dargon-txt
 
