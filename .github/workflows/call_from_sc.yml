@@ -1,4 +1,4 @@
-name: GENERATE ASSCI image
+name: call from script
 on: push
 
 jobs:
