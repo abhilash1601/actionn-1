@@ -9,7 +9,12 @@ jobs:
         uses: actions/Checkout@v4
 
       - name: Welcome message
-        run: echo "my first git hub"
+        run: | 
+            echo "my first git hub"
+            ls -ltra
+            cat README.md
+
+
 
       - name: List files
         run: ls
