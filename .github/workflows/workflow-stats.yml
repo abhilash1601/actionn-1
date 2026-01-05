@@ -1,0 +1,23 @@
+name: Exploring work flow filters and activities
+
+on:
+    workflow_dispatch: 
+    push:
+        branches: 
+            - main
+            - '!feature/*'
+
+    pull_request: 
+        types: 
+            - opened
+            - closed
+        paths-ignore: 
+            - README.md
+        branches: 
+            - main
+
+jobs:
+    hello:
+        runs-on: ubuntu-lastest
+        steps:
+         - run: echo this is workflow step is excuted for a event - ${{github.event_name}}
