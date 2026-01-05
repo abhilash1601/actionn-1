@@ -18,6 +18,6 @@ on:
 
 jobs:
     hello:
-        runs-on: ubuntu-lastest
+        runs-on: ubuntu-latest
         steps:
          - run: echo this is workflow step is excuted for a event - ${{github.event_name}}
